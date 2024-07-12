@@ -1,24 +1,23 @@
 "use client";
 
 import { useModal } from "@/utils/useModal";
-import { ReactNode, useState } from "react"
-import { ModalBody } from "./modals/ModalBody";
+import { ModalWrapper } from "./modals/ModalWrapper";
+import { ReactElement } from "react";
 
-interface ButtonProps {
-    buttonText: string,
+interface ShowModalButtonProps {
+    text: string,
+    modalContent: ReactElement
 }
 
-export default function ShowModalButton(props: ButtonProps) {
+export default function ShowModalButton(props: ShowModalButtonProps) {
     const { isShown, toggle } = useModal();
-
-    const content = <p>Modal testing.</p>
 
     return (
         <>
             <button className="m-4 p-2 w-36 rounded bg-white text-black" onClick={toggle}>
-                {props.buttonText}
+                {props.text}
             </button>
-            <ModalBody isShown={isShown} hide={toggle} modalContent={content}/>
+            <ModalWrapper isShown={isShown} hide={toggle} modalContent={props.modalContent}/>
         </>
     )
 }

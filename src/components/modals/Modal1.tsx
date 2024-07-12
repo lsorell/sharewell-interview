@@ -1,38 +1,41 @@
-interface Modal1Props {
-    isOpen: boolean;
-    onClose: () => void;
-}
+import Image from "next/image";
 
-export default function Modal1(props: Modal1Props){
-    if (!props.isOpen) return null;
-
+export default function Modal1() {
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-lg max-w-md w-full overflow-hidden">
-        <div className="bg-blue-600 p-6 relative">
-          <button
-            className="absolute top-4 right-4 text-white text-lg"
-            onClick={props.onClose}
-          >
-            X
-          </button>
-          <h2 className="text-white text-2xl mb-2">Modal 1</h2>
-          <p className="text-blue-100">Lorem Ipsum is simply</p>
-          <p className="text-blue-100 mt-4">Thursday, Jun 22, 2024</p>
-          <p className="text-blue-100">06:00pm - 07:30pm EST</p>
-          <div className="absolute top-0 right-0 w-32 h-32 bg-green-500 rounded-full" style={{ top: '1rem', right: '-1rem', backgroundImage: 'url(/path-to-your-image)' }}></div>
-        </div>
-        <div className="p-6">
-          <h3 className="text-gray-900 font-bold">Lorem Ipsum</h3>
-          <p className="text-gray-900 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys</p>
-          <div className="mt-4">
-            <p className="text-gray-700">Lorem Ipsum is simply dummy text.</p>
+    <div className="font-sans font-medium w-[339px] md:w-[640px]">
+      <div className="relative rounded-t h-[181px] md:h-[244px] w-full bg-sharewell-blue shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+        <div className="absolute left-[48px] top-[48px] md:top-[65px] gap-[10px] flex flex-col justify-center items-start self-stretch">
+          <h2 className="text-[18px]/[140%] md:text-[32px]/[140%] w-[396px]">Modal 1</h2>
+          <p className="text-[14px]/[140%]">Lorem Ipsum is simply</p>
+          <div className="text-[14px]/[140%] md:text-[16px]/[140%]">
+            <p>Thursday, Jun 22, 2024</p>
+            <p>06:00pm - 07:30pm EST</p>
           </div>
         </div>
-        <div className="p-4 bg-gray-50 text-center">
-          <button className="bg-gray-200 px-4 py-2 rounded-md text-gray-500">LOREM IPSUM</button>
+        <div className="absolute bottom-0 right-0 w-[158px] h-[115px] md:w-[345px] md:h-[251px]">
+          <Image src="/logo.svg" alt="Sharewell Logo" fill style={{
+          objectFit: 'contain',
+        }}/>
         </div>
+      </div>
+      <div className="h-[70px] w-full bg-white px-[24px] pt-[24px] gap-[10px] items-start self-stretch">
+        <p className="text-sharewell-charcoal text-[14px]/[140%]">Lorem Ipsum</p>
+        <p className="text-sharewell-blue text-[16px]/[140%] font-bold">
+          Lorem Ipsum
+        </p>
+        <div className="relative">
+          <button className="absolute right-[30px] bottom-[19px] w-[24px] h-[24px]">
+            <Image src="/close.svg" alt="Close" width={24} height={24} />
+          </button>
+        </div>
+      </div>
+      <div className="h-[80px] w-full bg-white px-[24px] pb-[24px] pt-[16px] gap-[16px] flex flex-col justify-center items-start self-stretch">
+        <p className="text-black text-[16px]/[140%] [md:text-[14px]/[140%]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+      </div>
+      <div className="h-[125px] w-full bg-white p-[24px] gap-[10px] text-center border-t border-1 border-modal-boarder flex flex-col items-start self-stretch">
+        <p className="w-full md:font-normal lg:font-medium text-sharewell-charcoal text-[14px]/[140%]">Lorem Ipsum is simply dummy text.</p>
+        <button className="w-full md:uppercase md:font-semibold lg:font-normal text-modal-button-text/20 text-[16px]/[140%] px-[24px] py-[12px] rounded-[12px] bg-modal-button/10">Lorem Ipsum</button>
       </div>
     </div>
   );
-};
+}
