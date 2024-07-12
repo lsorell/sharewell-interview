@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         "sharewell-blue": "#687CEB",
         "sharewell-charcoal": "#4A4A52",
+        "sharewell-black": "#292B2E",
         "modal-border": "#E5E7EB",
         "modal-button": "#292B2E",
         "modal-button-text": "#32A7AD",
