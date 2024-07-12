@@ -15,11 +15,7 @@ export const ModalWrapper: FC<ModalWrapperProps> = (
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
       onClick={props.hide}
     >
-      <div
-        onClick={(e) => e.stopPropagation()}
-      >
-        {props.modalContent}
-      </div>
+      <div onClick={(e) => e.stopPropagation()}>{props.modalContent}</div>
     </div>
   );
 

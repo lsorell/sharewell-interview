@@ -9,15 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'sharewell-blue': '#687CEB',
-        'sharewell-charcoal': '#4A4A52',
-        'modal-border': '#E5E7EB',
-        'modal-button': '#292B2E',
-        'modal-button-text': '#32A7AD',
+        "sharewell-blue": "#687CEB",
+        "sharewell-charcoal": "#4A4A52",
+        "modal-border": "#E5E7EB",
+        "modal-button": "#292B2E",
+        "modal-button-text": "#32A7AD",
       },
       fontFamily: {
-        'sans': ['Poppins', 'Helvetica', 'Arial', 'sans-serif'],
-      }
+        sans: ["Poppins", "Helvetica", "Arial", "sans-serif"],
+      },
     },
   },
   plugins: [],
