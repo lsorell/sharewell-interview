@@ -1,3 +1,7 @@
+# Project Details
+
+https://sedate-hat-5b5.notion.site/Frontend-Hire-Programming-Assignment-82eaab5dbc87424886fdc6d2dda0e095
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
